@@ -1,0 +1,129 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: "Nunito", sans-serif;
+    /* outline: 1px solid red; */
+}
+html{scroll-behavior: smooth;}
+:root{--accent-color: #0d83fd;--grayblue:#2D465E;}
+#up{
+    position: fixed;
+    display: block;
+    width: 40px;
+    height: 40px;
+    right: 3%;
+    bottom: 5%;
+    z-index: 989898;
+}
+.txtgrayblue{color: var(--grayblue) !important;}
+.txtblue{color: var(--accent-color) !important;}
+.txtwhite{color: white !important;}
+.bgblue{background-color: var(--accent-color) !important;}
+.bgwhite{background-color: white !important;}
+header{
+    min-height: 100vh;
+    background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--accent-color), transparent 95%) 50%, 
+    color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+}
+.navbar-nav .nav-item .active,.navbar-nav .nav-item a:hover  {color: var(--accent-color) !important;}
+#video:hover{color: var(--accent-color) !important;transition: 0.5s all;}
+.boxshadow{box-shadow: 0 0 10px rgb(144, 144, 144)}
+.customer{animation: move 2s ease  infinite;}
+.customer-avatar img,.customer-avatar span{
+    width: 35px !important;
+    height: 35px !important;
+    object-fit: cover !important;
+    margin-left: -10px !important;
+}
+#success i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px !important;
+    height: 80px !important;
+    background-color: #EAF3FD;
+    transition: 0.5s all;
+}
+#success .col-md-3:hover i{
+    color: white !important;
+    background-color: var(--accent-color);
+}
+
+.features h2 , .testimonial h2, .number h2,.services h2,.pricing #pricing,.contact h2{position: relative;}
+.features h2::after,.testimonial h2::after,.number h2::after,.services h2::after,.pricing #pricing::after.contact h2::after {
+    content: '';
+    bottom: -18px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    position: absolute;
+}
+.tab-content h2{position: relative;}
+.tab-content h2::before{
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color);
+    width: 70px;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+}
+.phone-app .icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ECF5FF;
+    border-radius: 50%;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#img1:hover img{content: url('img/client-1.png');}
+#img2:hover img{content: url('img/client-2.png');}
+#img3:hover img{content: url('img/client-3.png');}
+#img4:hover img{content: url('img/client-4.png');}
+#img5:hover img{content: url('img/client-5.png');}
+#img6:hover img{content: url('img/client-6.png');}
+#img7:hover img{content: url('img/client-7.png');}
+#callbtn:hover{
+    transition: 0.5s all;
+    background-color: white !important;
+    color: var(--accent-color) !important;
+}
+.info img{
+    width: 100px;
+    height: 100px;
+}
+#services-row .col-md-6 .card:hover .icon-left i{
+    transition: 0.45s all;
+    color: white !important;
+    background-color: var(--accent-color) !important;
+}
+.read-more:hover span{
+    transition: 0.5s all;
+    transform: translate(100px) !important;
+}
+footer a{color: #2D465E;}
+footer a:hover{color: var(--accent-color) !important;transition: 0.4s all;}
+@media only screen and (min-width:768px) {
+    #services-row .col-md-6{width: calc(50% - 1.5em);}
+    .contact .row .col-md-6{width: calc(50% - 1.5em);}
+}
+@keyframes move {
+    0%{transform: translateY(-20px);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(-20px);}
+}
